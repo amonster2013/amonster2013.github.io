@@ -1,0 +1,148 @@
+*{margin: 0;padding: 0;list-style: none;}
+/*
+KISSY CSS Reset
+理念：1. reset 的目的不是清除浏览器的默认样式，这仅是部分工作。清除和重置是紧密不可分的。
+2. reset 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
+3. reset 期望提供一套普适通用的基础样式。但没有银弹，推荐根据具体需求，裁剪和修改后再使用。
+特色：1. 适应中文；2. 基于最新主流浏览器。
+维护：玉伯<lifesinger@gmail.com>, 正淳<ragecarrier@gmail.com>
+ */
+
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+  margin: 0;
+  padding: 0;
+}
+
+/** 设置默认字体 **/
+body,
+button, input, select, textarea /* for ie */ {
+  font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+
+/** 重置文本格式元素 **/
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+
+/** 重置表单元素 **/
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: 0; } /* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea { font-size: 100%; } /* 使得表单元素在 ie 下能继承字体大小 */
+/* 注：optgroup 无法扶正 */
+
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot'); /* IE9*/
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff') format('woff'), /* chrome、firefox */
+  url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+@font-face {font-family: "colabthi";
+  src: url('ColabThi.otf');
+}
+
+body{background-color:#f2f2f2;font-family:'colabthi';}
+
+.header-content{min-width:1024px;background:url(images/bg.jpg) center no-repeat;background-size:cover;overflow:hidden;}
+@media only screen and (-moz-min-device-pixel-ratio: 2), 
+	   only screen and (-o-min-device-pixel-ratio: 2/1), 
+	   only screen and (-webkit-min-device-pixel-ratio: 2), 
+	   only screen and (min-device-pixel-ratio: 2){
+	   .header-content .nav .brand-icon{background:url(images/bg@2x.png) no-repeat;background-size:100%;}
+}
+
+.header-content .m-content{width:1000px;margin:0 auto;}
+.header-content .nav{width:1000px;padding-top:10px;overflow:hidden;}
+.header-content .nav .about-link{float:right;padding-top:30px;}
+.header-content .nav .about-link a{font-size:14px;color:#fff;font-family:'tahoma';text-decoration:none;}
+.header-content .nav .brand-icon{float:left;height:120px;width:300px;text-indent:-9999px;background:url(images/logo.png) no-repeat;}
+@media only screen and (-moz-min-device-pixel-ratio: 2), 
+	   only screen and (-o-min-device-pixel-ratio: 2/1), 
+	   only screen and (-webkit-min-device-pixel-ratio: 2), 
+	   only screen and (min-device-pixel-ratio: 2){
+	   .header-content .nav .brand-icon{background:url(images/logo@2x.png) no-repeat;background-size:100%;}
+}
+
+.app-info{overflow:hidden;margin-top:80px;}
+.app-info .l-appinfo{float:left;height:550px;width:256px;background: url(images/phone.png) no-repeat;}
+@media only screen and (-moz-min-device-pixel-ratio: 2), 
+	   only screen and (-o-min-device-pixel-ratio: 2/1), 
+	   only screen and (-webkit-min-device-pixel-ratio: 2), 
+	   only screen and (min-device-pixel-ratio: 2){
+	   .app-info .l-appinfo{background:url(images/phone@2x.png) no-repeat;background-size:100%;}
+}
+.app-info .r-appinfo{float:left;margin-left:60px;padding-top:70px;}
+.app-info .r-appinfo .title{color:#fff;font-size:52px;line-height:88px;}
+.app-info .r-appinfo .desc{color:#fff;font-size:18px;line-height:36px;}
+.app-info .r-appinfo .download a{margin-top:80px;display:inline-block;height:72px;width:182px;line-height:36px;background:url(images/downloadbutton.png) no-repeat;}
+@media only screen and (-moz-min-device-pixel-ratio: 2), 
+	   only screen and (-o-min-device-pixel-ratio: 2/1), 
+	   only screen and (-webkit-min-device-pixel-ratio: 2), 
+	   only screen and (min-device-pixel-ratio: 2){
+	   .app-info .r-appinfo .download a{background:url(images/downloadbutton@2x.png) no-repeat;background-size:100%;}
+}
+
+.m-content .slide-down{width:100%;text-align:center;position:relative;bottom:-50px;}
+.m-content .slide-down .slide-txt{display:inline-block;text-decoration:none;font-size:14px;color:#fff;cursor:pointer;}
+.m-content .slide-down .slide-font{display:inline-block;text-decoration:none;font-size:18px;color:#fff;font-family:"iconfont";cursor:pointer;}
+
+.m_body{background-color:#f2f2f2;width:100%;text-align:center;}
+.m_body .main-info {width:100%;text-align:center;overflow:hidden;}
+.main-info .introduce {width:1000px;margin:0 auto;}
+.m_body .main-info .l-intro{position:relative;}
+.m_body .main-info .l-intro img{position:absolute;z-index:1;left:400px;height:514px;width:680px;}
+.main-info .introduce .l-intro .cover-txt{text-align:left;position:relative;z-index:5;}
+.main-info .introduce .l-intro .intro-title{padding-top:60px;color:#000;font-size:32px;}
+.main-info .introduce .l-intro .intro-title2{padding-left:100px;color:#000;font-size:18px;margin-bottom:30px;}
+.main-info .introduce .l-intro .intro-detail{color:#000;font-size:14px;width:438px;margin-bottom:14px;line-height:28px;}
+
+.main-info .introduce .r-intro {overflow:hidden;margin-top:100px;margin-bottom:80px;position:relative;z-index:5;}
+.main-info .introduce .r-intro .example{float:left;}
+.main-info .introduce .r-intro .example img{height:262px;width:384px;}
+.main-info .introduce .r-intro .r-txt{padding-left:50px;padding-top:50px;float:left;color:#333;text-align:left;}
+.main-info .introduce .r-intro .r-txt .t-txt-title{font-size:22px;padding-bottom:60px;}
+.main-info .introduce .r-intro .r-txt .r-txt-contact{padding-bottom:12px;}
+.main-info .introduce .r-intro .r-txt .r-txt-contact,.main-info .introduce .r-intro .r-txt .r-txt-mail{font-size:14px;}
+
+.coop{background-color:#dadada;width:100%;}
+.coop .about-info{text-align:center;width:1000px;margin:0 auto;padding-bottom:40px;}
+.coop .about-info .info-title{font-size:36px;padding-top:50px;padding-bottom:16px;}
+.coop .about-info .info-detail{font-size:18px;padding-bottom:40px;}
+.coop .about-info ul{overflow:hidden;display:inline-block;}
+.coop .about-info .l{padding-right:150px;}
+.coop .about-info .cooperater{float:left;width:340px;}
+.coop .about-info .cooperater img{height:156px;width:156px;-moz-border-radius:78px;border-radius: 78px;}
+.coop .about-info .cooperater .name{font-size:18px;padding:20px 0;}
+.coop .about-info .cooperater .desc{text-align:left;font-size:14px;line-height:26px;}
+.coop .about-info .cooperater .bold{font-weight:700;}
+
+.footer{background-color:#000;text-align:center;width:100%;}
+.footer .inner{width:1000px;margin:0 auto;}
+.footer ul{overflow:hidden;display:inline-block;}
+.footer ul li{float:left;}
+.footer ul .l{padding-right:20px;}
+.footer .fb a,.footer .twitter a{font-family:"iconfont";color:#fff;text-decoration:none;cursor:pointer;}
+.footer .fb a:hover,.footer .twitter a:hover{color:#999;}
+.footer .f-logo{display:inline-block;margin:0 auto;height:72px;width:180px;background:url(images/logo_footer.png);}
+@media only screen and (-moz-min-device-pixel-ratio: 2), 
+	   only screen and (-o-min-device-pixel-ratio: 2/1), 
+	   only screen and (-webkit-min-device-pixel-ratio: 2), 
+	   only screen and (min-device-pixel-ratio: 2){
+	   .footer .f-logo{background:url(images/logo_footer@2x.png) no-repeat;background-size:100%;}
+}
